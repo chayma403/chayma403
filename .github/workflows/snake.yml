@@ -6,7 +6,7 @@ on:
   workflow_dispatch: # Permet de lancer manuellement si besoin
 
 permissions:
-  contents: write   # 🔑 Donne le droit au bot d'écrire dans ton repo
+  contents: write   # ✅ donne le droit de pousser (push) dans ton dépôt
 
 jobs:
   build:
