@@ -12,11 +12,17 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Create dist folder
+        run: mkdir -p dist
+
       - name: Generate Snake
         uses: Platane/snk@v3
         with:
           github_user_name: chayma403
           outputs: dist/snake.svg
+
+      - name: Verify generated file
+        run: ls -la dist/
 
       - name: Push Snake to output branch
         uses: crazy-max/ghaction-github-pages@v3
